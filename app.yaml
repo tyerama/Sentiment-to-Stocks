@@ -1,0 +1,7 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT main:app
+service_account: cloud-project-406821@appspot.gserviceaccount.com
+
+handlers:
+- url: /.*
+  script: auto
